@@ -1,0 +1,1234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="All-inclusive, sea-view apartment in Montenegro for digital nomads. High-speed fiber internet, Oct 1 – Jun 1. €450 single / €500 double." />
+  <meta name="theme-color" content="#0b2a3a" />
+  <title>Digital Nomad Apartment Montenegro | Sea View + Fiber | €450/€500</title>
+
+  <meta property="og:title" content="Your Perfect Digital Nomad Base in Montenegro" />
+  <meta property="og:description" content="Sea-view apartment with high-speed fiber internet. All bills included. Off-season only: Oct 1 – Jun 1." />
+  <meta property="og:type" content="website" />
+
+  <style>
+  
+    /* ---------- Reset / Base ---------- */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body{
+      margin:0;
+      color:#0a2a33;
+      background:#f6fbff;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      line-height:1.6;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+    img{ max-width:100%; display:block; }
+    a{ color:inherit; text-decoration:none; }
+    :focus-visible{ outline: 3px solid #f6a12a; outline-offset: 4px; border-radius: 14px; }
+    .sr-only{
+      position:absolute!important; width:1px; height:1px; padding:0; margin:-1px;
+      overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+    }
+
+    /* ---------- Tokens ---------- */
+    :root{
+      --ink:#0a2a33;
+      --muted:#4b6772;
+      --muted2:#6e8790;
+
+      --bg:#f6fbff;
+      --white:#ffffff;
+
+      --sea-900:#0b2a3a;
+      --sea-700:#0c4a6e;
+      --sea-500:#0ea5e9;
+      --sea-400:#38bdf8;
+
+      --sand:#f6a12a;
+      --peach:#f8b4a8;
+      --foam:#e9f6ff;
+
+      --border: rgba(10,42,51,.10);
+      --shadow: 0 26px 70px rgba(10,42,51,.12);
+      --shadow-soft: 0 18px 45px rgba(10,42,51,.10);
+
+      --radius: 22px;
+      --radius-xl: 34px;
+
+      --container: 1120px;
+
+      /* Organic shape sizes */
+      --blobA: 720px;
+      --blobB: 560px;
+    }
+
+    /* ---------- Layout helpers ---------- */
+    .container{ width:min(var(--container), calc(100% - 44px)); margin-inline:auto; }
+    .section{ padding: 88px 0; scroll-margin-top: 96px; position:relative; }
+    .section h2{
+      margin:0 0 12px;
+      font-size: clamp(1.7rem, 1.2rem + 1.2vw, 2.3rem);
+      line-height:1.15;
+      letter-spacing:-0.03em;
+    }
+    .lead{
+      margin:0;
+      color:var(--muted);
+      font-size: 1.08rem;
+    }
+    .reveal{ 
+        margin-bottom: 15px;
+    }
+    .grid{ display:grid; gap: 18px; }
+    .pill{
+      display:inline-flex; align-items:center; gap:10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(14,165,233,.18);
+      background: rgba(233,246,255,.85);
+      color: var(--sea-700);
+      font-weight: 700;
+      font-size: .92rem;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    /* ---------- Organic texture (pure CSS noise-ish) ---------- */
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      opacity:.10;
+      background-image:
+        radial-gradient(1px 1px at 12% 18%, rgba(10,42,51,.7) 45%, transparent 46%),
+        radial-gradient(1px 1px at 44% 62%, rgba(10,42,51,.6) 45%, transparent 46%),
+        radial-gradient(1px 1px at 72% 34%, rgba(10,42,51,.55) 45%, transparent 46%),
+        radial-gradient(1px 1px at 83% 78%, rgba(10,42,51,.5) 45%, transparent 46%),
+        radial-gradient(1px 1px at 22% 82%, rgba(10,42,51,.45) 45%, transparent 46%);
+      background-size: 180px 180px, 210px 210px, 240px 240px, 260px 260px, 300px 300px;
+      mix-blend-mode: multiply;
+      filter: blur(.2px);
+    }
+
+    /* ---------- Icon system (inline SVG) ---------- */
+    .icon{ width: 18px; height:18px; flex: 0 0 18px; display:inline-block; }
+    .stroke svg{ width:100%; height:100%; fill:none; stroke: currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+
+    /* ---------- Gentle motion / scroll reveals ---------- */
+    @media (prefers-reduced-motion: no-preference){
+      .reveal{
+        opacity:0;
+        transform: translateY(18px);
+        animation: up 0.95s ease forwards;
+        animation-timeline: view();
+        animation-range: entry 18% cover 34%;
+      }
+      @keyframes up{ to{ opacity:1; transform: translateY(0);} }
+
+      .breath{
+        animation: breath 10s ease-in-out infinite;
+      }
+      @keyframes breath{
+        0%,100%{ transform: translateY(0) scale(1); }
+        50%{ transform: translateY(-10px) scale(1.01); }
+      }
+    }
+    @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+
+    /* ---------- Header (soft glass) ---------- */
+    header{
+      position: sticky;
+      top:0;
+      z-index: 60;
+      background: rgba(246,251,255,.78);
+      border-bottom: 1px solid rgba(10,42,51,.08);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap: 14px;
+      padding: 16px 0;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+    }
+    .mark{
+      width: 42px; height:42px;
+      border-radius: 16px;
+      background:
+        radial-gradient(120% 120% at 20% 20%, rgba(56,189,248,.95), rgba(14,165,233,.92) 45%, rgba(11,42,58,.96) 100%);
+      box-shadow: 0 18px 40px rgba(14,165,233,.22);
+      display:grid; place-items:center;
+      color:#fff;
+      border: 1px solid rgba(255,255,255,.26);
+    }
+    nav ul{
+      list-style:none; display:flex; gap: 10px; margin:0; padding:0;
+      flex-wrap: wrap; justify-content:flex-end;
+    }
+    nav a{
+      display:inline-flex;
+      padding: 10px 12px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: .95rem;
+      transition: background .18s ease, color .18s ease;
+    }
+    nav a:hover{
+      background: rgba(14,165,233,.10);
+      color: var(--sea-700);
+    }
+
+    /* ---------- Buttons (rounded, gentle) ---------- */
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(10,42,51,.12);
+      background: rgba(255,255,255,.92);
+      color: var(--ink);
+      font-weight: 850;
+      box-shadow: 0 16px 34px rgba(10,42,51,.10);
+      transition: transform .14s ease, box-shadow .14s ease, background .14s ease;
+      white-space: nowrap;
+    }
+    .btn:hover{ transform: translateY(-1px); box-shadow: 0 22px 50px rgba(10,42,51,.14); }
+    .btn:active{ transform: translateY(0); box-shadow: 0 14px 30px rgba(10,42,51,.10); }
+    .btn-primary{
+      background: linear-gradient(135deg, rgba(14,165,233,1), rgba(56,189,248,1));
+      color:#fff;
+      border: 1px solid rgba(255,255,255,.22);
+    }
+    .btn-warm{
+      background: linear-gradient(135deg, rgba(246,161,42,1), rgba(248,180,168,1));
+      color: #3a2200;
+      border: 1px solid rgba(255,255,255,.22);
+    }
+
+    /* ---------- Organic background blobs ---------- */
+    .blob{
+      position:absolute;
+      width: var(--blobA);
+      height: var(--blobA);
+      border-radius: 54% 46% 55% 45% / 48% 52% 42% 58%;
+      background:
+        radial-gradient(closest-side at 30% 30%, rgba(56,189,248,.28), transparent 62%),
+        radial-gradient(closest-side at 70% 65%, rgba(246,161,42,.18), transparent 62%),
+        radial-gradient(closest-side at 45% 80%, rgba(14,165,233,.16), transparent 62%);
+      filter: blur(1px);
+      opacity: .95;
+      pointer-events:none;
+    }
+    .blob.one{ top: -240px; left: -260px; }
+    .blob.two{
+      width: var(--blobB);
+      height: var(--blobB);
+      top: 120px;
+      right: -220px;
+      border-radius: 62% 38% 48% 52% / 52% 50% 50% 48%;
+      background:
+        radial-gradient(closest-side at 30% 40%, rgba(248,180,168,.22), transparent 62%),
+        radial-gradient(closest-side at 70% 70%, rgba(56,189,248,.18), transparent 62%),
+        radial-gradient(closest-side at 40% 80%, rgba(246,161,42,.12), transparent 62%);
+    }
+
+    /* ---------- Hero ---------- */
+    .hero{
+      padding: 54px 0 24px;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero .container{ position:relative; }
+    .hero-layout{
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 26px;
+      align-items:center;
+    }
+    .hero h1{
+      margin: 12px 0 10px;
+      font-size: clamp(2.2rem, 1.5rem + 2.2vw, 3.25rem);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+    }
+    .sub{
+      margin:0 0 18px;
+      color: var(--muted);
+      font-size: 1.10rem;
+      max-width: 72ch;
+    }
+    .hero-badges{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-bottom: 14px;
+    }
+    .hero-actions{ display:flex; gap: 12px; flex-wrap:wrap; margin-top: 16px; }
+
+    /* Organic “glass card” */
+    .card{
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      background: rgba(255,255,255,.72);
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .card-inner{ padding: 22px; }
+
+    /* Media: circular frames + soft mask */
+    .hero-media{
+      position:relative;
+      min-height: 460px;
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(10,42,51,.12);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      background:
+        radial-gradient(900px 380px at 20% 15%, rgba(56,189,248,.22), transparent 55%),
+        radial-gradient(700px 340px at 80% 55%, rgba(246,161,42,.16), transparent 58%),
+        url("https://images.unsplash.com/photo-1526481280695-3c687fd5432c?auto=format&fit=crop&w=1600&q=70") center/cover no-repeat;
+    }
+    .hero-media::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: linear-gradient(180deg, rgba(11,42,58,.08), rgba(11,42,58,.56));
+    }
+    .hero-media .overlay{
+      position:absolute;
+      inset:auto 18px 18px 18px;
+      z-index:1;
+      color:#fff;
+      display:grid;
+      gap: 10px;
+    }
+    .overlay strong{ font-size: 1.08rem; letter-spacing: -.01em; }
+    .chips{ display:flex; gap:10px; flex-wrap:wrap; }
+    .chip{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.22);
+      background: rgba(255,255,255,.10);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: rgba(255,255,255,.92);
+      font-weight: 750;
+      font-size: .94rem;
+    }
+
+    /* Circular cutouts (organic collage feel) */
+    .orbit{
+      position:absolute;
+      inset: 16px;
+      pointer-events:none;
+      z-index:0;
+    }
+    .circle{
+      position:absolute;
+      border-radius: 999px;
+      overflow:hidden;
+      border: 1px solid rgba(255,255,255,.28);
+      box-shadow: 0 20px 60px rgba(10,42,51,.20);
+      background: rgba(255,255,255,.12);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    .circle.c1{ width: 150px; height:150px; top: 16px; left: 14px; }
+    .circle.c2{ width: 110px; height:110px; top: 140px; right: 16px; }
+    .circle.c3{ width: 84px; height:84px; bottom: 120px; left: 34px; }
+    .circle img{ width:100%; height:100%; object-fit: cover; opacity:.95; }
+
+    /* ---------- Lists / feature blocks ---------- */
+    .two-col{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 26px;
+      align-items:start;
+    }
+    .feature-list{
+      list-style:none;
+      margin:0;
+      padding:0;
+      display:grid;
+      gap: 14px;
+    }
+    .item{
+      display:flex;
+      gap: 14px;
+      padding: 16px 16px;
+      border-radius: 22px;
+      border: 1px solid rgba(10,42,51,.10);
+      background:
+        radial-gradient(120% 140% at 12% 0%, rgba(233,246,255,.95), rgba(255,255,255,.74) 58%),
+        rgba(255,255,255,.70);
+    }
+    .item b{ display:block; margin-bottom: 3px; letter-spacing:-.01em; }
+    .item p{ margin:0; color: var(--muted); font-size: .98rem; }
+    .badgeIcon{
+      width: 42px; height:42px;
+      border-radius: 999px;
+      display:grid; place-items:center;
+      border: 1px solid rgba(14,165,233,.18);
+      background: rgba(233,246,255,.9);
+      color: var(--sea-700);
+      flex: 0 0 42px;
+      margin-top: 2px;
+    }
+    .badgeIcon.warm{
+      border: 1px solid rgba(246,161,42,.22);
+      background: rgba(255,246,233,.95);
+      color: #8a4b00;
+    }
+
+    /* ---------- Pricing (rounded, airy) ---------- */
+    .pricing{
+      margin-top: 26px;
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+    .price-card{
+      position:relative;
+      padding: 22px;
+      border-radius: 36px;
+      border: 1px solid rgba(10,42,51,.12);
+      background:
+        radial-gradient(110% 120% at 12% 0%, rgba(233,246,255,.95), rgba(255,255,255,.78) 60%),
+        rgba(255,255,255,.86);
+      box-shadow: var(--shadow-soft);
+      overflow:hidden;
+    }
+    .price-card::before{
+      content:"";
+      position:absolute;
+      width: 220px; height:220px;
+      top:-120px; right:-120px;
+      border-radius: 999px;
+      background: radial-gradient(closest-side, rgba(56,189,248,.22), transparent 68%);
+      pointer-events:none;
+    }
+    .price-card.featured{
+      box-shadow: 0 28px 90px rgba(14,165,233,.18);
+      border-color: rgba(14,165,233,.28);
+    }
+    .tag{
+      position:absolute;
+      top: 16px; right: 16px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(246,161,42,.26);
+      background: rgba(255,246,233,.92);
+      color: #7a3f00;
+      font-weight: 900;
+      font-size: .86rem;
+    }
+    .price-card h3{ margin: 6px 0 10px; font-size: 1.25rem; letter-spacing:-.02em; }
+    .price{
+      display:flex; align-items:baseline; gap: 10px;
+      margin: 0 0 10px;
+    }
+    .amount{
+      font-size: 2.35rem;
+      font-weight: 950;
+      letter-spacing: -0.04em;
+    }
+    .per{ color: var(--muted); font-weight: 750; }
+    .checks{
+      list-style:none; padding:0; margin: 14px 0 0;
+      display:grid; gap: 10px;
+    }
+    .checks li{
+      display:flex; gap: 10px; align-items:flex-start;
+      color: var(--muted);
+      font-weight: 700;
+    }
+    .ok{
+      width: 22px; height:22px;
+      border-radius: 9px;
+      border: 1px solid rgba(14,165,233,.20);
+      background: rgba(233,246,255,.92);
+      color: var(--sea-700);
+      display:grid; place-items:center;
+      flex: 0 0 22px;
+      margin-top: 2px;
+    }
+
+    /* ---------- Availability (soft calendar) ---------- */
+    .availability{
+      margin-top: 26px;
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 18px;
+      align-items:start;
+    }
+    .calendar{
+      border-radius: 36px;
+      border: 1px solid rgba(10,42,51,.12);
+      background: rgba(255,255,255,.86);
+      box-shadow: var(--shadow-soft);
+      overflow:hidden;
+    }
+    .cal-head{
+      padding: 18px 22px;
+      background:
+        radial-gradient(140% 140% at 0% 0%, rgba(233,246,255,.98), rgba(255,255,255,.82) 62%),
+        linear-gradient(135deg, rgba(56,189,248,.10), rgba(246,161,42,.08));
+      border-bottom: 1px solid rgba(10,42,51,.10);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .legend{
+      display:flex; gap: 12px; flex-wrap:wrap;
+      color: var(--muted);
+      font-weight: 750;
+      font-size: .92rem;
+    }
+    .dot{ width: 10px; height:10px; border-radius: 999px; display:inline-block; margin-right: 7px; }
+    .dot.on{ background: rgba(14,165,233,.95); }
+    .dot.off{ background: rgba(10,42,51,.22); }
+
+    .months{
+      padding: 18px;
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    .month{
+      border-radius: 26px;
+      border: 1px solid rgba(10,42,51,.10);
+      background: rgba(246,251,255,.75);
+      padding: 14px;
+      display:grid;
+      gap: 6px;
+      min-height: 96px;
+    }
+    .month b{ letter-spacing:-.01em; }
+    .status{
+      display:inline-flex; align-items:center; gap:8px;
+      font-weight: 900;
+      font-size: .92rem;
+      color: var(--muted);
+    }
+    .status.on{ color: var(--sea-700); }
+
+    .callout{
+      padding: 18px;
+      border-radius: 28px;
+      border: 1px solid rgba(14,165,233,.18);
+      background: rgba(233,246,255,.86);
+      color: var(--sea-700);
+      font-weight: 800;
+    }
+
+    /* ---------- Gallery (circular frames) ---------- */
+    .gallery{
+      margin-top: 28px;
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 16px;
+    }
+    .shot{
+      border-radius: 36px;
+      border: 1px solid rgba(10,42,51,.12);
+      box-shadow: var(--shadow-soft);
+      background: rgba(255,255,255,.86);
+      overflow:hidden;
+      position:relative;
+      min-height: 180px;
+    }
+    .shot img{ width:100%; height:100%; object-fit:cover; }
+    .label{
+      position:absolute;
+      left: 14px; bottom: 14px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.22);
+      background: rgba(10,42,51,.45);
+      color: rgba(255,255,255,.92);
+      font-weight: 900;
+      font-size: .9rem;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    /* Circular “floating” frames */
+    .ringRow{
+      margin-top: 18px;
+      display:flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items:center;
+    }
+    .ring{
+      width: 120px;
+      height: 120px;
+      border-radius: 999px;
+      overflow:hidden;
+      border: 1px solid rgba(10,42,51,.12);
+      box-shadow: 0 18px 50px rgba(10,42,51,.12);
+      background: rgba(255,255,255,.9);
+      flex: 0 0 auto;
+    }
+    .ring img{ width:100%; height:100%; object-fit:cover; }
+
+    .span-8{ grid-column: span 8; }
+    .span-4{ grid-column: span 4; }
+
+    /* ---------- Contact ---------- */
+    .contact-grid{
+      margin-top: 26px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      align-items:start;
+    }
+    form{ display:grid; gap: 12px; margin-top: 16px; }
+    label{ font-weight: 900; font-size: .95rem; }
+    input, textarea, select{
+      width:100%;
+      padding: 12px 14px;
+      border-radius: 22px;
+      border: 1px solid rgba(10,42,51,.16);
+      background: rgba(255,255,255,.92);
+      color: var(--ink);
+      font: inherit;
+      transition: box-shadow .15s ease, border-color .15s ease;
+    }
+    input:focus, textarea:focus, select:focus{
+      outline:none;
+      border-color: rgba(246,161,42,.55);
+      box-shadow: 0 0 0 4px rgba(246,161,42,.18);
+    }
+    textarea{ min-height: 128px; resize: vertical; }
+    .small{ font-size: .92rem; color: var(--muted); }
+
+    /* ---------- Footer ---------- */
+    footer{
+      padding: 40px 0 56px;
+      border-top: 1px solid rgba(10,42,51,.10);
+      background:
+        radial-gradient(900px 260px at 20% 0%, rgba(233,246,255,.85), transparent 60%),
+        radial-gradient(700px 240px at 80% 40%, rgba(255,246,233,.65), transparent 62%),
+        linear-gradient(180deg, rgba(246,251,255,0), rgba(233,246,255,.85));
+      color: rgba(75,103,114,.96);
+    }
+    .foot{
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 980px){
+      .hero-layout{ grid-template-columns: 1fr; }
+      .hero-media{ min-height: 380px; }
+      .two-col{ grid-template-columns: 1fr; }
+      .pricing{ grid-template-columns: 1fr; }
+      .availability{ grid-template-columns: 1fr; }
+      .months{ grid-template-columns: repeat(2, 1fr); }
+      .contact-grid{ grid-template-columns: 1fr; }
+      nav ul{ display:none; } /* clean mobile header */
+      .blob.one{ top: -280px; left: -360px; }
+      .blob.two{ right: -320px; }
+    }
+    @media (max-width: 720px){
+      .section{ padding: 68px 0; }
+      .months{ grid-template-columns: 1fr; }
+      .span-8, .span-4{ grid-column: span 12; }
+      .circle.c1{ width: 120px; height:120px; }
+      .circle.c2{ width: 92px; height:92px; top: 160px; }
+      .circle.c3{ width: 72px; height:72px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header aria-label="Site header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="mark breath" aria-hidden="true">
+          <svg viewBox="0 0 24 24" class="stroke" aria-hidden="true">
+            <svg viewBox="0 0 24 24"></svg>
+          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:22px;height:22px">
+            <path d="M3 16c3 0 3-4 6-4s3 4 6 4 3-4 6-4"/>
+            <path d="M3 20c3 0 3-4 6-4s3 4 6 4 3-4 6-4"/>
+          </svg>
+        </span>
+        <span>Nomad Sea View • Montenegro</span>
+      </a>
+
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="#why">Why Montenegro</a></li>
+          <li><a href="#features">Apartment</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#availability">Availability</a></li>
+          <li><a href="#gallery">Photos</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top" aria-label="Hero section">
+      <div class="blob one breath" aria-hidden="true"></div>
+      <div class="blob two breath" aria-hidden="true"></div>
+
+      <div class="container hero-layout">
+        <div class="reveal">
+          <div class="hero-badges" aria-label="Key highlights">
+            <span class="pill">
+              <span class="icon stroke" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M7 11h10"/></svg>
+              </span>
+              Off-season only: Oct 1 – Jun 1
+            </span>
+            <span class="pill">
+              <span class="icon stroke" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M8.5 15.5a6 6 0 0 1 7 0"/><path d="M12 18h0"/></svg>
+              </span>
+              High-speed fiber internet for remote work
+            </span>
+            <span class="pill">
+              <span class="icon stroke" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M3 18c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2"/><path d="M3 14c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2"/></svg>
+              </span>
+              Sea view
+            </span>
+          </div>
+
+          <h1>Your Perfect Digital Nomad Base in Montenegro</h1>
+
+          <!-- NEW PRICE EMPHASIS -->
+  <div style="
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      margin:14px 0 16px;
+      padding:14px 20px;
+      border-radius:999px;
+      background: linear-gradient(135deg, rgba(14,165,233,.18), rgba(246,161,42,.18));
+      border:1px solid rgba(14,165,233,.25);
+      font-weight:900;
+      font-size:1.15rem;
+      letter-spacing:-0.02em;
+  ">
+    From €450 / month — all included
+  </div>
+
+          <p class="sub">
+            A calm, work-first apartment with the essentials handled: all bills included, dependable fiber internet, and a sea view that reminds you to stop doom-scrolling and go outside.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#pricing">
+              <span class="icon stroke" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 1v22"/><path d="M17 5H10a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6H6"/></svg>
+              </span>
+              See pricing
+            </a>
+            <a class="btn btn-warm" href="#gallery">
+              <span class="icon stroke" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 16l5-5 4 4 3-3 6 6"/></svg>
+              </span>
+              View photos
+            </a>
+          </div>
+
+          <p class="small" style="margin-top:16px">
+            <b>Location:</b> Montenegro — <span class="muted">Igalo | Herceg Novi</span>
+          </p>
+        </div>
+
+        <aside class="hero-media reveal" aria-label="Apartment imagery">
+          <div class="orbit" aria-hidden="true">
+            <div class="circle c1 breath">
+              <img alt="" src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=800&q=70" loading="lazy">
+            </div>
+            <div class="circle c2 breath">
+              <img alt="" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=70" loading="lazy">
+            </div>
+            <div class="circle c3 breath">
+              <img alt="" src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&w=800&q=70" loading="lazy">
+            </div>
+          </div>
+
+          <div class="overlay">
+            <strong>Quiet off-season. Reliable setup.</strong>
+            <div class="chips" aria-label="Feature chips">
+              <span class="chip">
+                <span class="icon stroke" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M3 12h18"/><path d="M5 12V7a7 7 0 0 1 14 0v5"/><path d="M7 12v9h10v-9"/></svg>
+                </span>
+                All-inclusive
+              </span>
+              <span class="chip">
+                <span class="icon stroke" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M8.5 15.5a6 6 0 0 1 7 0"/><path d="M12 18h0"/></svg>
+                </span>
+                Fiber internet
+              </span>
+              <span class="chip">
+                <span class="icon stroke" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M3 18c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2"/><path d="M3 14c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2"/></svg>
+                </span>
+                Sea view
+              </span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section class="section" id="why" aria-label="Why Montenegro">
+      <div class="container">
+        <div class="reveal">
+          <h2>Why Igalo - Montenegro for Digital Nomads</h2>
+          <p class="lead">
+            Montenegro is small, scenic, and refreshingly unpretentious: coastal towns with café culture, mountains close by, and an off-season rhythm that makes deep work easier.
+          </p>
+          <p class="lead"><b>Igalo</b> is a powerful winter base for digital nomads who prioritize clarity, health, and cost efficiency over crowded hotspots.</p>
+        </div>
+
+        <div class="card reveal">
+            <div class="card-inner">
+              
+
+                <div class="grid" style="grid-template-columns: 1fr 1fr;">
+                
+                    <div class="item">
+                        <span class="badgeIcon" aria-hidden="true">
+                            <span class="icon stroke">
+                            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                            </span>
+                        </span>
+                        <div><b>Strategic Location</b><p>Bay of Kotor, next to Herceg Novi. Tivat Airport 30 min, Dubrovnik Airport 45 min.</p></div>
+                    </div>
+
+                    <div class="item">
+                    <span class="badgeIcon" aria-hidden="true">
+                        <span class="icon stroke">
+                        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"></path><path d="M12 6v6l4 2"></path></svg>
+                        </span>
+                    </span>
+                    <div><b>Winter Climate</b><p>Mild Mediterranean microclimate with 10-15°C average. More sunlight than Northern Europe.</p></div>
+                    </div>
+
+                    <div class="item">
+                    <span class="badgeIcon" aria-hidden="true">
+                        <span class="icon stroke">
+                        <svg viewBox="0 0 24 24"><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                        </span>
+                    </span>
+                    <div><b>Cost Efficiency</b><p>€300-600/month rentals (off-season). Daily living €15-25. Groceries 40-60% cheaper than Western Europe.</p></div>
+                    </div>
+
+                    <div class="item">
+                    <span class="badgeIcon" aria-hidden="true">
+                        <span class="icon stroke">
+                        <svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><path d="M12 20h.01"></path></svg>
+                        </span>
+                    </span>
+                    <div><b>Fiber Internet</b><p>100+ Mbps standard speeds. Reliable mobile 4G/5G backup. Professional-grade connectivity.</p></div>
+                    </div>
+
+                    <div class="item">
+                    <span class="badgeIcon" aria-hidden="true">
+                        <span class="icon stroke">
+                        <svg viewBox="0 0 24 24"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path></svg>
+                        </span>
+                    </span>
+                    <div><b>Peaceful Environment</b><p>Quiet off-season atmosphere. Long seafront promenade. Minimal tourist crowds for deep work.</p></div>
+                    </div>
+
+                    <div class="item">
+                    <span class="badgeIcon" aria-hidden="true">
+                        <span class="icon stroke">
+                        <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                        </span>
+                    </span>
+                    <div><b>Health & Wellness</b><p>Institute Dr. Simo Milošević offers physiotherapy, therapeutic treatments, and sports recovery.</p></div>
+                    </div>
+
+                    <div class="item">
+                    <span class="badgeIcon" aria-hidden="true">
+                        <span class="icon stroke">
+                        <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                        </span>
+                    </span>
+                    <div><b>Nature Access</b><p>Mountains for hiking within 30 minutes. Beaches for morning swims. Bay of Kotor scenic views.</p></div>
+                    </div>
+
+                    <div class="item">
+                    <span class="badgeIcon" aria-hidden="true">
+                        <span class="icon stroke">
+                        <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        </span>
+                    </span>
+                    <div><b>Visa-Free Stay</b><p>90 days visa-free for most countries. Montenegro working toward EU accession.</p></div>
+                    </div>
+
+                    <div class="item">
+                        <span class="badgeIcon" aria-hidden="true">
+                            <span class="icon stroke">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"></path>
+                                <path d="M12 7v6l4 2"></path>
+                            </svg>
+                            </span>
+                        </span>
+                        <div>
+                            <b>Off-season calm</b>
+                            <p>October to June is quieter—less noise, fewer crowds, better focus.</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <span class="badgeIcon warm" aria-hidden="true">
+                            <span class="icon stroke">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M4 6h16v10H4z"></path>
+                                <path d="M2 18h20"></path>
+                                <path d="M9 6V4h6v2"></path>
+                            </svg>
+                            </span>
+                        </span>
+                        <div>
+                            <b>Remote-work friendly base</b>
+                            <p>Stable internet and a calm space. Meetings stay boring (the good kind).</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <span class="badgeIcon warm" aria-hidden="true">
+                            <span class="icon stroke">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2l3 7h7l-5.5 4 2 7-6.5-4.5L5.5 20l2-7L2 9h7z"></path>
+                            </svg>
+                            </span>
+                        </span>
+                        <div>
+                            <b>Quality of life</b>
+                            <p>Sunsets, waterfront walks, and an atmosphere that doesn’t spike your stress.</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <span class="badgeIcon warm" aria-hidden="true">
+                            <span class="icon stroke">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M20 7h-9"></path>
+                                <path d="M14 17H4"></path>
+                                <path d="M20 17h-3"></path>
+                                <path d="M7 7H4"></path>
+                                <circle cx="9" cy="7" r="2"></circle>
+                                <circle cx="15" cy="17" r="2"></circle>
+                            </svg>
+                            </span>
+                        </span>
+                        <div>
+                            <b>Europe-friendly schedule</b>
+                            <p>Great for EU working hours; still workable for US overlap with planning.</p>
+                        </div>
+                    </div>
+
+                </div>
+               
+
+              
+            </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section" id="features" aria-label="Apartment features">
+      <div class="container">
+        <div class="reveal">
+          <h2>Apartment Features & Amenities</h2>
+          <p class="lead">
+            Built around what matters for nomads: stable internet, predictable costs, a calm space, and a sea view.
+          </p>
+        </div>
+
+        <div class="col">
+          
+
+          <div class="card reveal">
+            <div class="card-inner">
+              <h3 style="margin:0 0 12px; letter-spacing:-.02em;">What’s included (all-in)</h3>
+              <div class="grid" style="grid-template-columns: 1fr 1fr;">
+                <div class="item">
+                  <span class="badgeIcon" aria-hidden="true">
+                    <span class="icon stroke"><svg viewBox="0 0 24 24"><path d="M12 3v18"/><path d="M7 8h10"/><path d="M7 16h10"/></svg></span>
+                  </span>
+                  <div><b>Electricity</b><p>Included in the monthly price.</p></div>
+                </div>
+                <div class="item">
+                  <span class="badgeIcon" aria-hidden="true">
+                    <span class="icon stroke"><svg viewBox="0 0 24 24"><path d="M12 2s4 4.5 4 8a4 4 0 0 1-8 0c0-3.5 4-8 4-8z"/><path d="M6 20h12"/></svg></span>
+                  </span>
+                  <div><b>Water</b><p>Included in the monthly price.</p></div>
+                </div>
+                <div class="item">
+                  <span class="badgeIcon" aria-hidden="true">
+                    <span class="icon stroke"><svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M8.5 15.5a6 6 0 0 1 7 0"/><path d="M12 18h0"/></svg></span>
+                  </span>
+                  <div><b>Fiber internet</b><p>Replace with verified Mbps (e.g., 300/100).</p></div>
+                </div>
+                <div class="item">
+                  <span class="badgeIcon warm" aria-hidden="true">
+                    <span class="icon stroke"><svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M7 16l5-5 5 5"/><path d="M12 11V3"/></svg></span>
+                  </span>
+                  <div><b>Household bills</b><p>Bundled monthly.</p></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section" id="pricing" aria-label="Pricing">
+      <div class="container">
+        <div class="reveal">
+          <h2>Pricing</h2>
+          <p class="lead">Clear comparison for 1 vs 2 people. All-inclusive monthly cost.</p>
+        </div>
+
+        <div class="pricing">
+          <article class="price-card reveal" aria-label="Single occupancy pricing">
+            <h3>Single Occupancy</h3>
+            <p class="price"><span class="amount">€450</span><span class="per">/ month</span></p>
+            <p class="lead" style="font-size:1rem; margin-top:4px;">For a solo nomad who wants calm and predictable costs.</p>
+
+            <ul class="checks" aria-label="Single occupancy includes">
+              <li><span class="ok" aria-hidden="true"><svg class="icon stroke" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span>Electricity + water included</li>
+              <li><span class="ok" aria-hidden="true"><svg class="icon stroke" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span>High-speed fiber internet included</li>
+              <li><span class="ok" aria-hidden="true"><svg class="icon stroke" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span>Household bills included</li>
+              <li><span class="ok" aria-hidden="true"><svg class="icon stroke" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span>Sea view</li>
+            </ul>
+
+            <div style="margin-top: 16px;">
+              <a class="btn btn-primary" href="#contact">
+                <span class="icon stroke" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg></span>
+                Inquire
+              </a>
+            </div>
+          </article>
+
+          <article class="price-card featured reveal" aria-label="Double occupancy pricing">
+            <div class="tag">Best value</div>
+            <h3>Double Occupancy</h3>
+            <p class="price"><span class="amount">€500</span><span class="per">/ month</span></p>
+            <p class="lead" style="font-size:1rem; margin-top:4px;">For couples or two friends working remotely together.</p>
+
+            <ul class="checks" aria-label="Double occupancy includes">
+              <li><span class="ok" aria-hidden="true"><svg class="icon stroke" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span>Electricity + water included</li>
+              <li><span class="ok" aria-hidden="true"><svg class="icon stroke" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span>High-speed fiber internet included</li>
+              <li><span class="ok" aria-hidden="true"><svg class="icon stroke" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span>Household bills included</li>
+              <li><span class="ok" aria-hidden="true"><svg class="icon stroke" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span>Sea view</li>
+            </ul>
+
+            <div style="margin-top: 16px;">
+              <a class="btn btn-primary" href="#contact">
+                <span class="icon stroke" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg></span>
+                Booking inquiry
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section" id="gallery" aria-label="Photo gallery">
+      <div class="container">
+        <div class="reveal">
+          <h2>Photo Gallery</h2>
+          <p class="lead">Placeholder images. Swap them with real apartment photos for trust and bookings.</p>
+        </div>
+
+        <div class="gallery">
+          <figure class="shot span-8 reveal" aria-label="Sea view photo">
+            <img alt="Placeholder: sea view from balcony" src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1600&q=70" loading="lazy" />
+            <figcaption class="label">Sea view</figcaption>
+          </figure>
+
+          <figure class="shot span-4 reveal" aria-label="Workspace photo">
+            <img alt="Placeholder: minimalist workspace" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=70" loading="lazy" />
+            <figcaption class="label">Workspace</figcaption>
+          </figure>
+
+          <figure class="shot span-4 reveal" aria-label="Living area photo">
+            <img alt="Placeholder: airy living area" src="https://images.unsplash.com/photo-1505693314120-0d443867891c?auto=format&fit=crop&w=1200&q=70" loading="lazy" />
+            <figcaption class="label">Living area</figcaption>
+          </figure>
+
+          <figure class="shot span-4 reveal" aria-label="Kitchen photo">
+            <img alt="Placeholder: bright kitchen" src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&w=1200&q=70" loading="lazy" />
+            <figcaption class="label">Kitchen</figcaption>
+          </figure>
+
+          <figure class="shot span-4 reveal" aria-label="Bedroom photo">
+            <img alt="Placeholder: calm bedroom" src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=70" loading="lazy" />
+            <figcaption class="label">Bedroom</figcaption>
+          </figure>
+        </div>
+
+        <div class="ringRow reveal" aria-label="Circular photo frames">
+          <div class="ring breath"><img alt="Placeholder circular: coastline" src="https://images.unsplash.com/photo-1526481280695-3c687fd5432c?auto=format&fit=crop&w=800&q=70" loading="lazy"></div>
+          <div class="ring breath"><img alt="Placeholder circular: desk" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=70" loading="lazy"></div>
+          <div class="ring breath"><img alt="Placeholder circular: interior" src="https://images.unsplash.com/photo-1505693314120-0d443867891c?auto=format&fit=crop&w=800&q=70" loading="lazy"></div>
+          <div class="ring breath"><img alt="Placeholder circular: kitchen detail" src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&w=800&q=70" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact" aria-label="Contact">
+      <div class="container">
+        <div class="reveal">
+          <h2>Booking Inquiry</h2>
+          <p class="lead">Send your dates and occupancy. You’ll get a confirmation on availability and next steps.</p>
+        </div>
+
+        <div class="contact-grid">
+         <div class="card reveal sr-only" aria-label="Inquiry form">
+            <div class="card-inner">
+              <h3 style="margin:0 0 10px; letter-spacing:-.02em;">Contact form</h3>
+
+              <!-- No JS required; mailto fallback. Replace with your endpoint for reliability. -->
+              <form action="mailto:your.email@example.com" method="post" enctype="text/plain">
+                <div>
+                  <label for="name">Full name</label>
+                  <input id="name" name="name" type="text" autocomplete="name" placeholder="Jane Doe" required />
+                </div>
+
+                <div class="grid" style="grid-template-columns: 1fr 1fr;">
+                  <div>
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" autocomplete="email" placeholder="jane@domain.com" required />
+                  </div>
+                  <div>
+                    <label for="occupancy">Occupancy</label>
+                    <select id="occupancy" name="occupancy" required>
+                      <option value="" disabled selected>Select</option>
+                      <option value="single">1 person (€450/month)</option>
+                      <option value="double">2 people (€500/month)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="grid" style="grid-template-columns: 1fr 1fr;">
+                  <div>
+                    <label for="movein">Move-in</label>
+                    <input id="movein" name="move-in" type="date" required />
+                  </div>
+                  <div>
+                    <label for="moveout">Move-out</label>
+                    <input id="moveout" name="move-out" type="date" required />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" placeholder="Share anything useful: desk needs, call-heavy schedule, questions about the area." required></textarea>
+                </div>
+
+                <button class="btn btn-primary" type="submit">
+                  <span class="icon stroke" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M22 2 11 13"/><path d="M22 2 15 22 11 13 2 9 22 2z"/></svg>
+                  </span>
+                  Send inquiry
+                </button>
+
+                <p class="small" style="margin:0;">
+                  Mailto forms depend on the visitor’s email client. For reliable submissions, replace the form action with a server endpoint.
+                </p>
+              </form>
+            </div>
+          </div>
+
+          <div class="card reveal" aria-label="Direct contact info">
+            <div class="card-inner">
+              <h3 style="margin:0 0 10px; letter-spacing:-.02em;">Direct contact</h3>
+              <p class="lead" style="font-size:1rem;">Replace placeholders with your real contact details.</p>
+
+              <div class="grid" style="gap: 12px; margin-top: 14px;">
+                <div class="item">
+                  <span class="badgeIcon" aria-hidden="true"><span class="icon stroke"><svg viewBox="0 0 24 24"><path d="M22 4 12 14.01 2 4"/><path d="M2 4h20v16H2z"/></svg></span></span>
+                  <div><b>Email</b><p><a href="mailto:your.email@example.com" style="text-decoration: underline; text-underline-offset: 3px;">your.email@example.com</a></p></div>
+                </div>
+
+                <div class="item">
+                  <span class="badgeIcon" aria-hidden="true"><span class="icon stroke"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.86.31 1.7.57 2.5a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.58-1.09a2 2 0 0 1 2.11-.45c.8.26 1.64.45 2.5.57A2 2 0 0 1 22 16.92z"/></svg></span></span>
+                  <div><b>Phone / WhatsApp</b><p><a href="tel:+38200000000" style="text-decoration: underline; text-underline-offset: 3px;">+382 00 000 000</a></p></div>
+                </div>
+
+                <div class="item">
+                  <span class="badgeIcon warm" aria-hidden="true"><span class="icon stroke"><svg viewBox="0 0 24 24"><path d="M12 21s8-4.5 8-11a8 8 0 0 0-16 0c0 6.5 8 11 8 11z"/><path d="M12 10.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/></svg></span></span>
+                  <div><b>City</b><p><b>Budva, Montenegro</b> (replace)</p></div>
+                </div>
+
+                <div class="callout">
+                  Pricing: <b>€450</b> (1 person) / <b>€500</b> (2 people).
+                  Available: <b>Oct 1 – Jun 1</b>.
+                </div>
+
+                <div style="display:flex; gap: 12px; flex-wrap: wrap;">
+                  <a class="btn btn-primary" href="#pricing">
+                    <span class="icon stroke" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 1v22"/><path d="M17 5H10a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6H6"/></svg></span>
+                    Pricing again
+                  </a>
+                  <a class="btn" href="#top">
+                    <span class="icon stroke" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg></span>
+                    Back to top
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer aria-label="Footer">
+    <div class="container foot">
+      <div class="small">
+        <b>Nomad Sea View • Montenegro</b> — all-inclusive off-season apartment for remote workers.
+      </div>
+      <div class="small">
+        © 2026 • Igalo | Herceg Novi | Montenegro.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+```
