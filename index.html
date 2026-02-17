@@ -11,6 +11,9 @@
   <meta property="og:description" content="Sea-view apartment with high-speed fiber internet. All bills included. Off-season only: Oct 1 – Jun 1." />
   <meta property="og:type" content="website" />
 
+  <!-- Bigger Picture Lightbox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bigger-picture@1.1.19/dist/bigger-picture.min.css">
+
   <style>
   
     /* ---------- Reset / Base ---------- */
@@ -69,7 +72,7 @@
 
     /* ---------- Layout helpers ---------- */
     .container{ width:min(var(--container), calc(100% - 44px)); margin-inline:auto; }
-    .section{ padding: 88px 0; scroll-margin-top: 96px; position:relative; }
+    .section{ padding: 60px 0; scroll-margin-top: 96px; position:relative; }
     .section h2{
       margin:0 0 12px;
       font-size: clamp(1.7rem, 1.2rem + 1.2vw, 2.3rem);
@@ -654,6 +657,34 @@
       .circle.c2{ width: 92px; height:92px; top: 160px; }
       .circle.c3{ width: 72px; height:72px; }
     }
+
+    /* Gallery Grid */
+    .gallery-grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 26px;
+    }
+    .gallery-item{
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid rgba(10,42,51,.12);
+      box-shadow: var(--shadow-soft);
+      background: rgba(255,255,255,.86);
+      cursor: pointer;
+      transition: transform .18s ease, box-shadow .18s ease;
+      aspect-ratio: 1;
+    }
+    .gallery-item:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 20px 50px rgba(10,42,51,.14);
+    }
+    .gallery-item img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
   </style>
 </head>
 
@@ -760,42 +791,8 @@
           </p>
         </div>
 
-        <aside class="hero-media reveal" aria-label="Apartment imagery">
-          <div class="orbit" aria-hidden="true">
-            <div class="circle c1 breath">
-              <img alt="" src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=800&q=70" loading="lazy">
-            </div>
-            <div class="circle c2 breath">
-              <img alt="" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=70" loading="lazy">
-            </div>
-            <div class="circle c3 breath">
-              <img alt="" src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&w=800&q=70" loading="lazy">
-            </div>
-          </div>
-
-          <div class="overlay">
-            <strong>Quiet off-season. Reliable setup.</strong>
-            <div class="chips" aria-label="Feature chips">
-              <span class="chip">
-                <span class="icon stroke" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M3 12h18"/><path d="M5 12V7a7 7 0 0 1 14 0v5"/><path d="M7 12v9h10v-9"/></svg>
-                </span>
-                All-inclusive
-              </span>
-              <span class="chip">
-                <span class="icon stroke" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M8.5 15.5a6 6 0 0 1 7 0"/><path d="M12 18h0"/></svg>
-                </span>
-                Fiber internet
-              </span>
-              <span class="chip">
-                <span class="icon stroke" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M3 18c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2"/><path d="M3 14c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2"/></svg>
-                </span>
-                Sea view
-              </span>
-            </div>
-          </div>
+        <aside class="" aria-label="Apartment imagery">
+          <img src="hero.jpg" alt="">
         </aside>
       </div>
     </section>
@@ -1070,41 +1067,40 @@
       <div class="container">
         <div class="reveal">
           <h2>Photo Gallery</h2>
-          <p class="lead">Placeholder images. Swap them with real apartment photos for trust and bookings.</p>
+          <p class="lead">Click any image to view the apartment in detail.</p>
         </div>
 
-        <div class="gallery">
-          <figure class="shot span-8 reveal" aria-label="Sea view photo">
-            <img alt="Placeholder: sea view from balcony" src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1600&q=70" loading="lazy" />
-            <figcaption class="label">Sea view</figcaption>
-          </figure>
-
-          <figure class="shot span-4 reveal" aria-label="Workspace photo">
-            <img alt="Placeholder: minimalist workspace" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=70" loading="lazy" />
-            <figcaption class="label">Workspace</figcaption>
-          </figure>
-
-          <figure class="shot span-4 reveal" aria-label="Living area photo">
-            <img alt="Placeholder: airy living area" src="https://images.unsplash.com/photo-1505693314120-0d443867891c?auto=format&fit=crop&w=1200&q=70" loading="lazy" />
-            <figcaption class="label">Living area</figcaption>
-          </figure>
-
-          <figure class="shot span-4 reveal" aria-label="Kitchen photo">
-            <img alt="Placeholder: bright kitchen" src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&w=1200&q=70" loading="lazy" />
-            <figcaption class="label">Kitchen</figcaption>
-          </figure>
-
-          <figure class="shot span-4 reveal" aria-label="Bedroom photo">
-            <img alt="Placeholder: calm bedroom" src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=70" loading="lazy" />
-            <figcaption class="label">Bedroom</figcaption>
-          </figure>
-        </div>
-
-        <div class="ringRow reveal" aria-label="Circular photo frames">
-          <div class="ring breath"><img alt="Placeholder circular: coastline" src="https://images.unsplash.com/photo-1526481280695-3c687fd5432c?auto=format&fit=crop&w=800&q=70" loading="lazy"></div>
-          <div class="ring breath"><img alt="Placeholder circular: desk" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=70" loading="lazy"></div>
-          <div class="ring breath"><img alt="Placeholder circular: interior" src="https://images.unsplash.com/photo-1505693314120-0d443867891c?auto=format&fit=crop&w=800&q=70" loading="lazy"></div>
-          <div class="ring breath"><img alt="Placeholder circular: kitchen detail" src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&w=800&q=70" loading="lazy"></div>
+        <div class="gallery-grid" id="galleryContainer">
+          <a class="gallery-item" data-img="https://picsum.photos/800/800?random=1" data-caption="Living area">
+            <img src="https://picsum.photos/400/400?random=1" alt="Gallery image 1" loading="lazy">
+          </a>
+          <a class="gallery-item" data-img="https://picsum.photos/800/800?random=2" data-caption="Sea view">
+            <img src="https://picsum.photos/400/400?random=2" alt="Gallery image 2" loading="lazy">
+          </a>
+          <a class="gallery-item" data-img="https://picsum.photos/800/800?random=3" data-caption="Bedroom">
+            <img src="https://picsum.photos/400/400?random=3" alt="Gallery image 3" loading="lazy">
+          </a>
+          <a class="gallery-item" data-img="https://picsum.photos/800/800?random=4" data-caption="Kitchen">
+            <img src="https://picsum.photos/400/400?random=4" alt="Gallery image 4" loading="lazy">
+          </a>
+          <a class="gallery-item" data-img="https://picsum.photos/800/800?random=5" data-caption="Terrace">
+            <img src="https://picsum.photos/400/400?random=5" alt="Gallery image 5" loading="lazy">
+          </a>
+          <a class="gallery-item" data-img="https://picsum.photos/800/800?random=6" data-caption="Workspace">
+            <img src="https://picsum.photos/400/400?random=6" alt="Gallery image 6" loading="lazy">
+          </a>
+          <a class="gallery-item" data-img="https://picsum.photos/800/800?random=7" data-caption="Bathroom">
+            <img src="https://picsum.photos/400/400?random=7" alt="Gallery image 7" loading="lazy">
+          </a>
+          <a class="gallery-item" data-img="https://picsum.photos/800/800?random=8" data-caption="Entrance">
+            <img src="https://picsum.photos/400/400?random=8" alt="Gallery image 8" loading="lazy">
+          </a>
+          <a class="gallery-item" data-img="https://picsum.photos/800/800?random=9" data-caption="Night view">
+            <img src="https://picsum.photos/400/400?random=9" alt="Gallery image 9" loading="lazy">
+          </a>
+          <a class="gallery-item" data-img="https://picsum.photos/800/800?random=10" data-caption="Exterior">
+            <img src="https://picsum.photos/400/400?random=10" alt="Gallery image 10" loading="lazy">
+          </a>
         </div>
       </div>
     </section>
@@ -1224,6 +1220,32 @@
       </div>
     </div>
   </footer>
+
+  <!-- Bigger Picture Lightbox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bigger-picture@1.1.19/dist/bigger-picture.min.js" async onload="initBiggerPicture()"></script>
+
+  <script>
+    function initBiggerPicture() {
+
+      let bp = BiggerPicture({
+        target: document.body,
+      });
+
+      let galleryItems = Array.from(document.querySelectorAll('#galleryContainer a.gallery-item'));
+
+      galleryItems.forEach(function(element) {
+        element.addEventListener('click', function(e) {
+          e.preventDefault();
+
+          bp.open({
+            items: galleryItems,
+            el: element,
+          });
+
+        });
+      });
+    }
+  </script>
 </body>
 </html>
 ```
